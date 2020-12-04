@@ -1,4 +1,5 @@
 #!/bin/sh
+
 . ./settings.env
 
 cd md
@@ -10,4 +11,5 @@ pandoc -s ./$MARKDOWN.md \
 	--citeproc \
 	--csl ../pandoc/$STYLE.csl \
 	--pdf-engine xelatex
+
 
