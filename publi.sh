@@ -1,6 +1,6 @@
-docker run --rm \
+docker run -it --rm \
 	--volume ${PWD}:/data \
 	--user `id -u`:`id -g` \
 	--entrypoint "/data/pandoc/script.sh" \
-	pandoc
+	dockerized-pandoc
 
