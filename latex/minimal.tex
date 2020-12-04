@@ -1,5 +1,6 @@
 
-\documentclass{article}
+% use minimal_class.cls in ./cls/ folder
+\documentclass{minimal_class}
 
 \usepackage{hyperref}
 
@@ -47,6 +48,9 @@ $endif$
 \begin{document}
 
 
+\title{$title$}
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\maketitle
 $body$
 
 

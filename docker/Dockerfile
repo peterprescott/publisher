@@ -7,3 +7,8 @@ RUN tlmgr update --all --self
 COPY ./tex_packages.txt \
     /tex_packages.txt
 RUN tlmgr install `cat /tex_packages.txt`
+
+COPY ./latex/* \
+    /texmf/tex/latex/
+
+
