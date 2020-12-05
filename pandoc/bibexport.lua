@@ -1,3 +1,8 @@
+--[[
+I found this script at tex.stackexchange.com
+https://tex.stackexchange.com/questions/392070/pandoc-markdown-create-self-contained-bib-file-from-cited-references/401153#401153
+--]]
+
 local citation_ids = {}
 
 function Doc(body, meta, vars)
