@@ -1,6 +1,3 @@
-[submodule "lit-review"]
-	path = lit-review
-	url = https://github.com/peterprescott/lit-review
 [submodule "example"]
 	path = example
 	url = https://github.com/peterprescott/example
