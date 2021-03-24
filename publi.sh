@@ -5,6 +5,8 @@ docker run --rm \
 	dockerized-pandoc
 
 . ./settings.env
+. ./$PROJECT/settings.env
+
 if [ $MINIMIZE_REFS = true ] ; then
 
 	# generate minimized .bib file
@@ -15,7 +17,7 @@ if [ $MINIMIZE_REFS = true ] ; then
 		dockerized-pandoc
 
 	# clean up
-	cd ./md/
+	cd ./$PROJECT/md/
 	rm bibexport.aux
 	mv bibexport.bib ../bib/${REFS}_used_in_${MARKDOWN}.bib
 
