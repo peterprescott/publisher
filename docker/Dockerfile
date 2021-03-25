@@ -9,6 +9,12 @@ COPY ./tex_packages.txt \
     /tex_packages.txt
 RUN tlmgr install `cat /tex_packages.txt`
 
+RUN apt-get update
+RUN apt-get install -y haskell-platform --fix-missing
+RUN cabal update
+RUN cabal install pandoc-csv2table --force-reinstalls
+RUN cp /root/.cabal/bin/pandoc-csv2table /bin/pandoc-csv2table
+
 COPY ./latex/* \
     /texmf/tex/latex/
 

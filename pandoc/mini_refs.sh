@@ -8,6 +8,7 @@ cd ./$PROJECT/md
 
 pandoc ./$MARKDOWN.md \
 	--to ../../pandoc/bibexport.lua \
-	--bibliography ../bib/$REFS.bib \
 	--filter pandoc-crossref \
+	--filter pandoc-csv2table \
+	--bibliography ../bib/$REFS.bib \
 	--citeproc 

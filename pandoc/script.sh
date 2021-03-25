@@ -11,6 +11,7 @@ cd ./$PROJECT/md
 pandoc -s ./$MARKDOWN.md \
 	-o ../pdf/${MARKDOWN}_${TEMPLATE}.pdf \
 	--template ../../latex/$TEMPLATE.tex \
+	--filter pandoc-csv2table \
 	--filter pandoc-crossref \
 	--bibliography ../bib/$REFS.bib \
 	--citeproc \
