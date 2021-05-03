@@ -1,9 +1,10 @@
 
-\documentclass[onecolumn,12pt]{article}
+\documentclass[onecolumn,11pt]{article}
 
 % \renewcommand{\familydefault}{\sfdefault}
 
-\linespread{1.3}
+\linespread{1.1}
+\setlength\parskip{0.5em plus 0.1em minus 0.2em}
 
 \usepackage{amsfonts,amssymb,amsbsy,amsmath,amsthm}
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -103,15 +104,18 @@ $endif$
 
 \begin{document}
 
-\title{$title$}
+\title{$title$ \\ \large $subtitle$}
 \author{$for(author)$$author$$sep$ \and $endfor$}
 \date{}
 \maketitle
 $if(abstract)$
+\renewcommand\abstractname{\normalfont\textsc{Abstract}}
 	\begin{abstract}
 	  $abstract$
 	\end{abstract}
 $endif$
+\tableofcontents
+\pagebreak
 
 $body$
 
